@@ -2,6 +2,7 @@ package com.insider.tests;
 
 import com.insider.utilities.ConfigurationReader;
 import com.insider.utilities.Driver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class HomePageTests {
@@ -20,6 +21,8 @@ public class HomePageTests {
         String actualTitle = Driver.getDriver().getTitle();
         System.out.println(actualTitle);
 
+        //Verify homepage is opened
+        Assert.assertEquals(actualTitle,expectedTitle);
 
     }
 
