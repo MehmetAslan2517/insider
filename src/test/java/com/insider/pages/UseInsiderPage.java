@@ -11,7 +11,7 @@ public class UseInsiderPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//a[.='Company'] ")
+    @FindBy(xpath = "//a[contains(text(),'Company')]")
     public WebElement companyButton;
 
     @FindBy(xpath = "//a[.='Careers'] ")
@@ -26,5 +26,9 @@ public class UseInsiderPage {
     @FindBy(xpath = "//h3[contains(text(),'Our Locations')]")
     public WebElement ourLocationsText;
 
+    @FindBy(xpath = "//h3[.='Quality Assurance']")
+    public WebElement qualityAssuranceText;
 
+    @FindBy(xpath = "//a[.='Only Necessary']")
+    public WebElement onlyNecessary;
 }

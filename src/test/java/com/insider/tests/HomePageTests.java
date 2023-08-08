@@ -1,6 +1,7 @@
 package com.insider.tests;
 
 import com.insider.pages.UseInsiderPage;
+import com.insider.utilities.BrowserUtils;
 import com.insider.utilities.ConfigurationReader;
 import com.insider.utilities.Driver;
 import org.testng.Assert;
@@ -48,4 +49,20 @@ public class HomePageTests {
         Assert.assertTrue(homepage.ourLocationsText.isDisplayed());
 
     }
+
+    /*
+    Go to https://useinsider.com/careers/quality-assurance/, click “See all QA jobs”, filter
+    jobs by Location: “Istanbul, Turkey”, and Department: “Quality Assurance”, check the
+    presence of the job list
+     */
+
+    @Test
+    public void jobList(){
+
+        homepage.seeAllTeamsText.click();
+        homepage.qualityAssuranceText.click();
+
+
+    }
+
 }
